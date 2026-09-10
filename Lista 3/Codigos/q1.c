@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(){
 
@@ -11,9 +12,9 @@ int main(){
     puts("Insira o objeto B: (a p v)");
     scanf("%d %d %d", &aB, &pB, &vB);
 
-    int aTot = aB - aA;
-    int pTot = pB - pA;
-    int vTot = vB - vA;
+    int aTot = abs(aB - aA);
+    int pTot = abs(pB - pA);
+    int vTot = abs(vB - vA);
 
     if(aTot >= pTot && aTot >= vTot){
         printf("Distância: %d", aTot);
@@ -23,4 +24,6 @@ int main(){
         printf("Distância: %d", vTot);
     }
 
+
+    return 0;
 }
