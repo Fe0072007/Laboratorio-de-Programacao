@@ -25,7 +25,7 @@ int main(){
         puts("Insira o valor a ser normalizado: ");
         scanf("%d", &xNorm);
 
-        printf("%.2lf\n", (double) (xNorm - min)/(max - min));
+        printf("%.2f\n", (float) (xNorm - min)/(max - min));
     }
 
     return 0;
