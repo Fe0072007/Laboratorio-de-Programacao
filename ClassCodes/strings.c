@@ -1,12 +1,17 @@
 #include <stdio.h>
 #include <string.h>
 
+#define TAM 10
+
 int main(){
     int cont = 0 ;
-    char string[80];
+    char string[TAM+1];
 
     puts("Insira uma palavra: ");
-    gets(string);
+    // gets(string);
+    fgets(string, TAM+1, stdin);
+
+    printf("Nome: %s\n", string);
 
     printf("Strlen: %ld\n", strlen(string));
 
