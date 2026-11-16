@@ -6,20 +6,17 @@ int *alocarMemoria(const int);
 void popularVetor(int* const, const int, const int);
 void printVetor(const int* const, int);
 
-int main(int argc, char** argv){
+int main(int argc, char* argv[]){
 
     srand(time(NULL));
     // arquivo <tamanho> <limite>
 
-    printVetor(argv, argc);
-
-    if(argc > 3){
+    if(argc != 3){
         puts("Comando só precisa de dois argumentos");
     }
 
-    int tam = atoi((*argv + (argc-2)));  
-    int lim = atoi((*argv + (argc-1)));
-
+    int tam = atoi(*(argv + (argc - 2)));  
+    int lim = atoi(*(argv + (argc - 1)));
 
     int* p = alocarMemoria(tam);
 
